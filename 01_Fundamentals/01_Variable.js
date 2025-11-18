@@ -7,7 +7,6 @@ var userName = "Jagat";
 
 // let (use when value changes)
 let age = 22;
-
 /*age = 40;
 console.log(age); --> It's Output is 40*/
 

@@ -7,6 +7,8 @@ The purpose is to help you quickly recall core concepts and revise them anytime.
 
 ## 📌 Topics Covered
 
+## 📌 A-->
+
 ### 1. Variable Declarations
 
 - **var** – function scoped, avoid using
