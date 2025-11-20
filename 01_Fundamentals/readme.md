@@ -263,6 +263,152 @@ console.log("Stored by value example:", y); // 10
 
 ---
 
-Use this README to revise before interviews or while practicing JavaScript basics.
+---
+
+# 🚀JavaScript Objects, Arrays & Functions
+
+## 📌 03
+
+## 🟦 1. JavaScript Objects
+
+Objects store data in **key–value** pairs.
+
+### ✅ Creating an Object
+
+```js
+const user = {
+  name: "Jagat",
+  age: 22,
+  city: "Dhangadhi",
+};
+```
+
+### ✅ Accessing Properties
+
+```js
+user.name; // dot notation
+user["city"]; // bracket notation
+```
+
+### ✅ Dynamic Property Access
+
+```js
+const key = "age";
+user[key];
+```
+
+### ✅ Adding & Updating
+
+```js
+user.email = "rahul@example.com";
+user.age = 25;
+```
+
+### ❌ Deleting a Property
+
+```js
+delete user.city;
+```
+
+### 🧠 Methods Inside Objects
+
+```js
+const person = {
+  name: "Aman",
+  greet() {
+    console.log("Hello! My name is", this.name);
+  },
+};
+```
+
+### 🏗 Nested Objects
+
+```js
+const customer = {
+  name: "John",
+  address: { city: "Delhi", country: "India" },
+};
+```
 
 ---
+
+## 🟩 2. JavaScript Arrays
+
+Arrays store ordered lists of values.
+
+### 🚀 Creating Arrays
+
+```js
+const numbers = [1, 2, 3];
+const fruits = ["apple", "banana", "mango"];
+```
+
+### 🔍 Access Elements
+
+```js
+fruits[0]; // apple
+```
+
+### ✏️ Update Elements
+
+```js
+fruits[1] = "orange";
+```
+
+### 📏 Array Length
+
+```js
+fruits.length;
+fruits.length = 2; // truncates array
+```
+
+### ➕ Add / Remove Items
+
+```js
+numbers.push(4); // add end
+numbers.pop(); // remove end
+numbers.unshift(0); // add start
+numbers.shift(); // remove start
+```
+
+---
+
+## 🟨 3. JavaScript Functions
+
+Functions allow reusable logic.
+
+### 1️⃣ Function Declaration (Hoisted)
+
+```js
+function greet() {
+  console.log("Hello from function declaration!");
+}
+```
+
+### 2️⃣ Function Expression (Not Hoisted Same Way)
+
+```js
+const sayHi = function () {
+  console.log("Hello from function expression!");
+};
+```
+
+### 3️⃣ Arrow Functions
+
+```js
+const add = (a, b) => a + b;
+```
+
+### 4️⃣ Arrow Function No Params
+
+```js
+const hello = () => console.log("Hello!");
+```
+
+### 5️⃣ Default Parameters
+
+```js
+function multiply(a, b = 2) {
+  return a * b;
+}
+```
