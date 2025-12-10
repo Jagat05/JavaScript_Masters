@@ -16,3 +16,30 @@ arr.forEach((item) => {
   sum = sum + item;
 });
 console.log(sum);
+
+const arr1 = ["ram", 90, 70, 50];
+const arr2 = ["shyam", 99, 88, 35];
+
+// Q1. create an array which contains names of students only
+
+// hint use typeof operator
+const names = arr1.concat(arr2).filter((item) => {
+  // yedi item to typeof 'string' ho vaney matra return garne
+  if (typeof item === "string") {
+    return item;
+  }
+});
+console.log(names);
+
+// Q2. calculate the total score of ram and shyam
+
+let sum2 = 0;
+// const marks = [...arr, ...arr2];
+// marks.forEach((item) => {
+[...arr, ...arr2].forEach((item) => {
+  // yedi item typeof 'number' ho vaney sum ma add garne
+  if (typeof item === "number") {
+    sum2 = sum2 + item;
+  }
+});
+console.log(sum2);
