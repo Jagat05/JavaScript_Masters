@@ -48,3 +48,30 @@ console.log(count);
 (function () {
   console.log("IIFE executed!");
 })();
+
+(() => {
+  console.log("IIFE executed!");
+})();
+
+// Recursive Function
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+console.log(factorial(5)); // Output: 120
+
+// Calculate total price of products in the cart
+function calculateTotalPrice(cartItems) {
+  return cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+}
+
+const cart = [
+  { product: "Laptop", price: 1000, quantity: 2 },
+  { product: "Phone", price: 500, quantity: 3 },
+];
+console.log(calculateTotalPrice(cart)); // Output: 3500
