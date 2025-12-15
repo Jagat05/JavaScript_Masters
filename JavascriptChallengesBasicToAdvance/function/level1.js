@@ -14,15 +14,10 @@ console.log(add(5, 3));
 
 //Anonymous Function
 const hello = function () {
-  //Other Example arrow function inside map,filter...
   console.log("Hello!");
 };
 
 hello();
-
-setTimeout(() => {
-  console.log("Hello!");
-}, 1000);
 
 //Arrow Function (ES6))
 const multiply = (a, b) => a * b;
@@ -40,38 +35,34 @@ let count = 0;
 
 function increment() {
   count++; // modifies external variable
-} //Any External Resource Should not be affected
+}
 increment();
 console.log(count);
+//function syntax
 
-// IIFE (Immediately Invoked Function Expression)
-(function () {
-  console.log("IIFE executed!");
-})();
+// function test(){
+//     return 33
+// }
 
-(() => {
-  console.log("IIFE executed!");
-})();
+//arrow function syntax
+const test = () => 33; //single line
+// const test = () => {
+//     return 33
+// } //multi line
 
-// Recursive Function
-function factorial(n) {
-  if (n === 0 || n === 1) {
-    return 1;
-  }
-  return n * factorial(n - 1);
-}
-console.log(factorial(5)); // Output: 120
+// Q1. write a function that can take two numbers as input and return the sum while
+// printing
+const sum = (num1, num2) => {
+  return num1 + num2;
+};
+console.log(sum(2, 3));
+// Q2. write a function that generates a random  number between two input provided numbers
 
-// Calculate total price of products in the cart
-function calculateTotalPrice(cartItems) {
-  return cartItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
-}
-
-const cart = [
-  { product: "Laptop", price: 1000, quantity: 2 },
-  { product: "Phone", price: 500, quantity: 3 },
-];
-console.log(calculateTotalPrice(cart)); // Output: 3500
+const generateRandomNumber = (max) => {
+  let random = Math.round(Math.random() * max);
+  // let round = Math.round(random);
+  //console.log(round);
+  console.log(random);
+};
+generateRandomNumber(10);
+// Hint use Math.random()
